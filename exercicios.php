@@ -7,20 +7,20 @@
     <title>PHP 1</title>
 </head>
 <body>
-    <!--a) -->
- <form action="" method="get">
-  Tabuada do:  <input type="text" name="num" /><br />
-  <input type="submit" name="submit" value="Testar" />
- </form> 
 
  <?php 
-  $tabuada = $_GET['num'];
-  $count=1;
-  
-  while($count<=10){
-   echo $tabuada." x ".$count." = ".($tabuada*$count)."<br />";
-   $count++;
-  }
+echo "A)";
+  function tabuada($tabuada){
+    $cont = 1;
+    $resultado = '';
+ 
+    while ($cont <= 10){
+         $resultado .=  $tabuada . 'x' . $cont . ' = ' . ($tabuada * $cont);
+       $cont++;
+    }
+ 
+    return $resultado;
+ }
 
 echo "B)";
   $letras= ["a","z","m"];
@@ -28,7 +28,7 @@ echo "B)";
   for($i = 0; $i < count($letras); $i++)
    echo $letras[$i] . "<br>";
   echo "<br>";
-   echo '<p>Invertendo!<p>';
+   echo '<p>Invertendo<p>';
   function inverter(){
   $letras= ["a","z","m"];
   $letras = array_reverse($letras, false); 
@@ -76,7 +76,7 @@ echo "E)";
 
 echo "F)";
     function busca_texto1($b){ 
-        echo "Foi encontrada a palavra:"."<p style='color:red;'>".$b."<p style='color:black;'>"; 
+        echo "Palavra encontrada:"."<p style='color:red;'>".$b."<p style='color:black;'>"; 
         } 
     $busca_texto= 'busca_texto1'; 
         $texto=["Rosa","Violeta","Bromelia","Caliandra","Magnolia","Cravo"]; 
