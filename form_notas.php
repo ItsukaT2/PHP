@@ -7,13 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    
-
-<?php
-function media($n1, $n2) {
-$media=($n1+$n2)/2;
-return $media;
-}
-?>
+<form action='home.php' method="get">
+  Nota 1: <input type="text" name="num1"><br>
+  Nota 2: <input type="text" name="num2"><br>
+  <input type="submit">
+ </form>
+ 
+ <?php 
+  $num1 = $_GET['num1'];
+  $num2 = $_GET['num2'];
+  
+  $media = ($num1 + $num2)/2;
+  
+  echo "Média: $media";
+ ?>
 </body>
 </html>
