@@ -44,12 +44,47 @@ while ($i <= 4) {
     $i++;
 }
 ?>
-    </table>
+</table>
+
+<table>
+<!--outra forma...-->
+<tr>
+    <td>Dados:</td>
+    <td>Nome: </td>
+    <td>Genero: </td>
+    <td>Data de nascimento: </td>
+    <td>Telefone: </td>
+    <td>Email: </td>
+</tr>
+<?php
+
+echo ("<h1>Ler todas as linhas do .txt</h1>");
+
+$arq=fopen("notas.txt","r");
+
+while(!feof($arq)) {
+    $linha = fgets($arq, 4096);
+    $file=json_decode($linha,true);
+
+    echo ("<tr><td>"."coisas:");
+    foreach ($file as $u) {
+    echo ("<td>");
+    echo $u;
+    echo ("</td>");
+}
+    echo ("</td></tr>"); 
+}
+
+?>
+</table>
 
 
 <table>
         <?php
         //outra coisa
+        $arq=fopen("notas.txt","r");
+        $linha=fgets($arq);
+        $file=json_decode($linha,true);
 echo ("<br><h1>Dados sem loop</h1>");
 
 echo ("<tr><td>Nome: <td>");

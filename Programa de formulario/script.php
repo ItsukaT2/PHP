@@ -24,7 +24,7 @@ $pessoa["email"] = $_POST["email"];
 $dados= json_encode($pessoa); 
 
 $arq=fopen("notas.txt","a");
-fwrite($arq,$dados."\r\n");
+fwrite($arq,$dados.PHP_EOL);
 fclose($arq);
 
 ?>

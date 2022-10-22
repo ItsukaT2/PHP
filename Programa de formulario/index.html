@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <fieldset>
+        <legend><h1>Dados Pessoais</h1></legend>
+
+    <form action="script.php" method="post">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome"> <br><br>
+        
+        <label for="genero">Gênero: </label><br>
+        
+        <input type="radio" id="masc" name="genero" value="Masculino">
+        <label for="masc">Masculino</label><br>
+        <input type="radio" id="fem" name="genero" value="Feminino">
+        <label for="fem">Feminino</label><br>
+        <input type="radio" id="desc" name="genero" value="Desconhecido">
+        <label for="desc">Não quero informar</label><br>
+        <br>
+
+        <label for="nasc">Data de nascimento:</label>
+        <input type="date" id="nasc" name="nasc"><br><br>
+
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone" maxlength="14"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <input type="submit" value="Enviar">
+    </fieldset>
+    </form>
+</body>
+</html>
