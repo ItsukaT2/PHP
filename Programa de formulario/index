@@ -7,7 +7,8 @@
     <title>Formulario</title>
 </head>
 <body>
-    <h1>Formulario</h1>
+    <fieldset>
+        <legend><h1>Dados Pessoais</h1></legend>
 
     <form action="script.php" method="post">
         <label for="nome">Nome: </label>
@@ -19,7 +20,7 @@
         <label for="masc">Masculino</label><br>
         <input type="radio" id="fem" name="genero" value="Feminino">
         <label for="fem">Feminino</label><br>
-        <input type="radio" id="desc" name="genero" value="?">
+        <input type="radio" id="desc" name="genero" value="Desconhecido">
         <label for="desc">Não quero informar</label><br>
         <br>
 
@@ -33,7 +34,7 @@
         <input type="email" id="email" name="email"><br><br>
 
         <input type="submit" value="Enviar">
-        
+    </fieldset>
     </form>
 </body>
 </html>
