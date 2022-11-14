@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Popping:200,300,400,500,600,700,800,900&display=swa');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Popping', sans-serif;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+
